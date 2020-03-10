@@ -1,5 +1,3 @@
-To start the server, run `nodemon server.js`
+This Alibay style project, created from backend to frontend and designed from 3 individuals with a passion for crafting.
 
-Modify the `server.js` file to add endpoints
-
-The frontend code goes in the `/src` directory
+We came together through project management ideas, communication and skillset to build this fun shopping site.
