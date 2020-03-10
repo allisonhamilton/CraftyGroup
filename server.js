@@ -91,10 +91,9 @@ app.post("/signup", upload.single("img"), (req, res) => {
   let file = req.file;
   let imgPath = "/uploads/" + file.filename;
   console.log("backend image", imgPath);
-  dbo.collection("users").findOne(
-    {
-      username: name
-    },
+  dbo.collection("users").findOne({
+    username: name
+  }),
     (err, user) => {
       if (err) {
         res.send(
@@ -129,8 +128,7 @@ app.post("/signup", upload.single("img"), (req, res) => {
         );
         return;
       }
-    }
-  );
+    };
 });
 
 app.post("/login", upload.none(), (req, res) => {

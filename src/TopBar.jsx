@@ -6,7 +6,7 @@ import Search from "./Search.jsx";
 
 class UnconnectedTopBar extends Component {
   logoutHandler = evt => {
-    fetch("/logout", { method: "POST", body: "", creditals: "include" });
+    fetch("/logout", { method: "POST", body: "", credentials: "include" });
     this.props.dispatch({ type: "logout" });
     alert("You have logged out. Come back again now!");
   };
@@ -61,7 +61,7 @@ class UnconnectedTopBar extends Component {
             />
 
             <div className="topbar-right-text">
-              Hello, {this.props.username}{" "}
+              Hello, {this.props.username}
             </div>
           </Link>
         </div>

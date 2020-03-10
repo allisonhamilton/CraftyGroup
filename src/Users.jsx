@@ -5,6 +5,7 @@ import "./users.css";
 
 class UnconnectedUsers extends Component {
   render() {
+    console.log("USERRSSS", this.props.user.image);
     return (
       <div className="grid">
         <div className="users-all">
@@ -19,7 +20,17 @@ class UnconnectedUsers extends Component {
               {/* TODO: make work  */}
               <ul>
                 {this.props.items.map(item => {
-                  return <li>{item.title}</li>;
+                  return (
+                    <li>
+                      <img
+                        height="100px"
+                        width="100px"
+                        align="center"
+                        src={item.image}
+                      />
+                      {item.title}
+                    </li>
+                  );
                 })}
               </ul>
             </div>
@@ -29,7 +40,6 @@ class UnconnectedUsers extends Component {
           </div>
         </div>
         <div className="reviews">
-          Reviews of products:
           <ul>
             {this.props.reviews.map(review => {
               return (

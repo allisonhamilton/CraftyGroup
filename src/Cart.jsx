@@ -8,7 +8,7 @@ class UnconnectedCart extends Component {
     let filtered = this.props.cart.filter((ele, i) => {
       return i !== index;
     });
-
+    
     this.props.dispatch({
       type: "deleteCartItem",
       cart: filtered
